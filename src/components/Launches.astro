@@ -1,4 +1,5 @@
 ---
+import { date } from "astro:schema";
 import { getLaunches } from "../services/apilaunch";
 import CardLaunch from "./CardLaunch.astro";
 
@@ -8,13 +9,22 @@ const launches = await getLaunches();
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
   {
     launches.map(
-      ({ id, links, flight_number: flightNumber, success, details }) => (
+      ({
+        id,
+        links,
+        flight_number: flightNumber,
+        success,
+        details,
+        date_utc,date_unix
+      }) => (
         <CardLaunch
           id={id}
           img={links.patch.small}
           details={details}
           flightNumber={flightNumber}
           sucess={success}
+          date={date_utc}
+          dateUnix={date_unix}
         />
       )
     )
