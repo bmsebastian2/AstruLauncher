@@ -1,0 +1,75 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+---
+
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+  <div class="mx-auto text-center mb-8 lg:mb-16">
+    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+      SpaceX Launcher 🚀
+    </h2>
+    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+      All the information about the SpaceX launches.
+    </p>
+  </div>
+
+  <nav
+    class="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0"
+  >
+    <HeaderButton href="./">
+      <svg
+        class="mr-2"
+        slot="before"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M10.425 1.414a3.33 3.33 0 0 1 3.026 -.097l.19 .097l6.775 3.995l.096 .063l.092 .077l.107 .075a3.224 3.224 0 0 1 1.266 2.188l.018 .202l.005 .204v7.284c0 1.106 -.57 2.129 -1.454 2.693l-.17 .1l-6.803 4.302c-.918 .504 -2.019 .535 -3.004 .068l-.196 -.1l-6.695 -4.237a3.225 3.225 0 0 1 -1.671 -2.619l-.007 -.207v-7.285c0 -1.106 .57 -2.128 1.476 -2.705l6.95 -4.098zm1.575 13.586a1 1 0 0 0 -.993 .883l-.007 .117l.007 .127a1 1 0 0 0 1.986 0l.007 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm1.368 -6.673a2.98 2.98 0 0 0 -3.631 .728a1 1 0 0 0 1.44 1.383l.171 -.18a.98 .98 0 0 1 1.11 -.15a1 1 0 0 1 -.34 1.886l-.232 .012a1 1 0 0 0 .111 1.994a3 3 0 0 0 1.371 -5.673z"
+        ></path></svg
+      >
+
+      Ultimos lanzamientos
+    </HeaderButton>
+    <HeaderButton href="./oldes">
+      <svg
+        class="mr-2"
+        slot="before"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"
+        ></path><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path><path
+          d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path></svg
+      >
+      Sobre el proyecto
+    </HeaderButton>
+    <HeaderButton href="./about">
+      <svg
+        class="mr-2"
+        slot="before"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M3 12a9 9 0 0 0 5.998 8.485m12.002 -8.485a9 9 0 1 0 -18 0"
+        ></path><path d="M12 7v5"></path><path
+          d="M12 15h2a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-1a1 1 0 0 0 -1 1v1a1 1 0 0 0 1 1h2"
+        ></path><path d="M18 15v2a1 1 0 0 0 1 1h1"></path><path d="M21 15v6"
+        ></path></svg
+      >
+
+      About</HeaderButton
+    >
+  </nav>
+</header>

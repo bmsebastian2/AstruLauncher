@@ -1,0 +1,40 @@
+---
+import { getLaunches } from "../../services/apilaunch";
+import { getLaunche } from "../../services/apilaunch";
+import Layout from "../../layouts/Layout.astro";
+const { id } = Astro.params;
+let launch;
+if (id) {
+  launch = await getLaunche({ id });
+}
+
+export async function getStaticPaths() {
+  const launches = await getLaunches();
+  return launches.map(({ id }) => ({ params: { id } }));
+}
+---
+
+<Layout title="Launch">
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <article class="flex gap-y-4 flex-col">
+      <img
+        class="w-52 h-auto"
+        src={launch?.links?.patch.small}
+        alt={launch?.name}
+      />
+      <h2 class="text-4xl text-white font-bold">
+        launch #{launch?.flight_number}
+      </h2>
+      <p class="text-lg">{launch?.details}</p>
+      {launch?.id}
+    </article>
+    <!--     
+    <CardLaunch
+      id={launch?.id}
+      img={launch.links.patch.small}
+      details={launch.details}
+      flightNumber={launch.flight_number}
+      sucess={launch.success}
+    /> -->
+  </div></Layout
+>
